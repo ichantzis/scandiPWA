@@ -18,7 +18,7 @@
     // background: black;
     color: white;
 
-    @media (max-width: 1023px) {
+    @include mobile {
         padding: 0;
         z-index: 90;
         transform: translateY(0);
@@ -26,7 +26,7 @@
     }
 
     &-ContentWrapper {
-        @media (min-width: 1024px) {
+        @include desktop {
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -45,8 +45,9 @@
         font-size: 1.5rem;
         margin-inline: 10px;
         margin-inline-end: 10px;
+        padding-block-start: 10px;
 
-        @media (max-width: 1023px) {
+        @include mobile {
             /* Styles for mobile */
         }
     }
@@ -65,12 +66,12 @@
             font-size: 1.5rem;
             color: white;
 
-            @media (max-width: 1023px) {
+            @include mobile {
                 /* Styles for mobile */
             }
         }
 
-        @media (min-width: 1024px) {
+        @include desktop {
             margin-inline-start: 2.4rem;
         }
     }

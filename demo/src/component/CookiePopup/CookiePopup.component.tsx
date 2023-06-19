@@ -7,14 +7,12 @@ import { ReactElement } from 'Type/Common.type';
 export class CookiePopupComponent extends SourceCookiePopupComponent {
     renderCookieText(): ReactElement {
         // const { cookieText } = this.props;
-        const cookieText1 = 'Χρησιμοποιούμε cookies για να βελτιώσουμε την εμπειρία σας! ';
-        const cookieText2 = ' σχετικά με τους κανόνες του GDPR στους όρους χρήσης.';
+        const cookieText1 = 'We use cookies in order to give you the best possible experience on our website. ';
 
         return (
             <p block="CookiePopup" elem="Content">
                 { cookieText1 }
                 { this.renderCookieLink() }
-                { cookieText2 }
             </p>
         );
     }
@@ -33,7 +31,7 @@ export class CookiePopupComponent extends SourceCookiePopupComponent {
               elem="Link"
               to={ cookieLink }
             >
-                { __('Μάθετε περισσοτερα') }
+                { __('View Policy') }
             </Link>
         );
     }
@@ -49,7 +47,7 @@ export class CookiePopupComponent extends SourceCookiePopupComponent {
                   onClick={ this.acceptCookies }
                   onKeyDown={ this.acceptCookies }
                 >
-                    Αποδοχή
+                    Accept
                 </button>
             </div>
         );
